@@ -14,7 +14,7 @@
 	<footer id="colophon" class="footer" data-scroll-section>
 		<div class="footer-container">
 			<div class="footer-top">
-				<h2>Únete a nuestro <strong>BOLETIN INFORMATIVO.</strong></h2>
+				<h2>Únete a nuestro <strong>BOLETIN INFORMATIVO</strong></h2>
 				<p>¡Suscríbete a nuestra newsletter y tendrás acceso a promociones exclusivas y mucho más!</p>
 				<!-- Begin Mailchimp Signup Form -->
 					<div id="mc_embed_signup">
