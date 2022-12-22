@@ -23,12 +23,11 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- <div <?php if (is_front_page()) : echo 'data-scroll-container'; endif; ?>> -->
-<div data-scroll-container>
+<div <?php if (!is_product()) : echo 'data-scroll-container'; endif; ?> >
 	<button type="button" class="close-mini-cart" data-close-minicart></button>
 
 	<?php get_template_part( 'template-parts/nav/announcement' ); ?>
-	<header id="header" class="header <?php if (!is_front_page()) : echo 'header-transparent'; endif; ?>" >
+	<header id="header" class="header<?php if (!is_front_page()) : echo ' header-transparent'; endif; ?>" <?php if (is_product()) : echo 'data-header'; endif; ?>>
 		<div class="header__wrapper">
 			<?php get_template_part( 'template-parts/nav/logo' ); ?>
 			<?php get_template_part( 'template-parts/nav/main-menu' ); ?>

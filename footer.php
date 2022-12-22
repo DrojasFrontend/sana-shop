@@ -36,7 +36,7 @@
 							<div style="position: absolute; left: -5000px;" aria-hidden="true">
 								<input type="text" name="b_6c9b8c80439723dc706679f5b_e7af778304" tabindex="-1" value="">
 							</div>
-							<input type="submit" value="Subscribe" name="ENVIAR" id="mc-embedded-subscribe" class="button">
+							<input type="submit" value="ENVIAR" name="Subscribe" id="mc-embedded-subscribe" class="button">
 						</div>
 					</form>
 				</div>

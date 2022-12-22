@@ -3,7 +3,7 @@
     function display_element($item, &$children_elements, $max_depth, $depth, $args, &$output) {
       if($max_depth == 0){ ?>
         <li class="menu-item">
-          <a class="" href="<?php echo $item->url; ?>">
+          <a class="menu-item-link" href="<?php echo $item->url; ?>">
             <?php echo $item->title ?>
           </a>
           

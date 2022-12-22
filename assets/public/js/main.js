@@ -87,6 +87,7 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   var $openMiniCart = $('[data-open-minicart]');
   var $closeMiniCart = $('[data-close-minicart]');
+  var $dataHeader = $('[data-header]');
   $openMiniCart.on('click', function () {
     $openMiniCart.addClass('open');
     setTimeout(function () {
@@ -96,6 +97,14 @@ jQuery(document).ready(function ($) {
   $closeMiniCart.on('click', function () {
     $openMiniCart.removeClass('open');
     $closeMiniCart.removeClass('active');
+  });
+  $(window).on('scroll', function () {
+    var $Scroll = $(document).scrollTop();
+    if ($Scroll > 30) {
+      $dataHeader.addClass('scroll');
+    } else {
+      $dataHeader.removeClass('scroll');
+    }
   });
 });
 

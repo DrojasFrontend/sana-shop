@@ -10,6 +10,7 @@ require $theme_dir . '/admin/menus.php';
 require $theme_dir . '/admin/side-bar.php';
 require $theme_dir . '/admin/widgets.php';
 require $theme_dir . '/admin/woocommerce.php';
+require $theme_dir . '/admin/translate-string.php';
 
 function sanna_shop_setup() {
 
@@ -29,14 +30,3 @@ add_theme_support( 'custom-logo', array(
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-function change_multiple_texts( $translated ) {
-	$text       = array(
-			'RETURN TO SHOP' => 'Volver a la tienda',
-			'No products on your wishlist yet.' => 'No hay productos en su lista de deseos todavía.',
-
-	);
-	$translated = str_ireplace( array_keys( $text ), $text, $translated );
-	return $translated;
-}
-add_filter( 'gettext', 'change_multiple_texts', 20 );
