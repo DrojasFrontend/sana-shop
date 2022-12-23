@@ -44,6 +44,11 @@
 			</div>
 		</div>
 		<hr>
+		<div class="footer-social-mobile">
+			<div class="footer-container">
+				<?php dynamic_sidebar('Footer 4') ; ?> 
+			</div>
+		</div>
 		<div class="footer-container">
 			<div class="footer-info">
 				

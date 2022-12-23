@@ -279,19 +279,19 @@ html.has-scroll-dragging {
 
 @font-face {
   font-family: "work_sansregular";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/worksans.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/worksans.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/worksans.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/worksans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "maginiaregular";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/maginiaregular.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/maginiaregular.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/maginiaregular.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/maginiaregular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "suisse_intlultralight";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/suisse.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/suisse.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/suisse.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/suisse.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -333,7 +333,7 @@ body {
   width: 25px;
   height: 25px;
   border: 0;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/ico-close.svg");
+  background: url("http://localhost:10023/wp-content/uploads/ico-close.svg");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -435,6 +435,14 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   padding: 80px 0 0;
   border-top: 1px solid #000000;
 }
+.footer hr {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .footer hr {
+    display: block;
+  }
+}
 .footer-container {
   width: 100%;
   max-width: 1440px;
@@ -458,10 +466,15 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .footer-info {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  row-gap: 11px;
   padding: 20px 0 16px;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-info {
+    grid-template-columns: repeat(5, 1fr);
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 .footer-info .menu {
   margin: 0;
@@ -473,7 +486,53 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   letter-spacing: 1px;
 }
 .footer-info li {
+  position: relative;
   list-style: none;
+}
+.footer-info li input[type=checkbox] {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  opacity: 0;
+  cursor: pointer;
+}
+.footer-info li i {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  transform: translate(2px, 0) rotate(0);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-info li i {
+    display: none;
+  }
+}
+.footer-info li.footer-1 ul li {
+  border: 0;
+}
+.footer-info li.footer-3 {
+  border: 0;
+}
+.footer-info li.footer-4, .footer-info li.footer-5 {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-info li.footer-4, .footer-info li.footer-5 {
+    display: block;
+  }
+}
+.footer-info li.footer-1, .footer-info li.footer-2, .footer-info li.footer-3, .footer-info li.footer-4, .footer-info li.footer-5 {
+  border-bottom: 1px solid #000000;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-info li.footer-1, .footer-info li.footer-2, .footer-info li.footer-3, .footer-info li.footer-4, .footer-info li.footer-5 {
+    border: 0;
+  }
 }
 .footer-info h4,
 .footer-info p {
@@ -488,21 +547,79 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .footer-info p br {
   display: none;
 }
+.footer-info .textwidget {
+  display: block;
+  max-height: 0;
+  padding: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: 0.3s opacity, 0.6s max-height;
+  will-change: max-height;
+  contain: layout;
+  overflow: hidden;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-info .textwidget {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+}
 .footer-info a {
   display: block;
   color: #000000;
   text-decoration: none;
   margin-bottom: 5px;
 }
+.footer-info input[type=checkbox]:checked ~ .textwidget {
+  max-height: 250px;
+}
+.footer-info input[type=checkbox]:checked ~ i {
+  transform: translate(0px, 0) rotate(45deg);
+}
 .footer-bottom {
   font-family: "suisse_intlultralight";
+  padding-top: 50px;
   padding-bottom: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
 }
+@media only screen and (min-width: 1024px) {
+  .footer-bottom {
+    font-size: 14px;
+    padding-top: 0;
+  }
+}
 .footer-bottom a {
+  color: #000000;
+  text-decoration: none;
+}
+.footer-social-mobile {
+  display: block;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-social-mobile {
+    display: none;
+  }
+}
+.footer-social-mobile li {
+  list-style: none;
+}
+.footer-social-mobile li h4 {
+  display: none;
+}
+.footer-social-mobile li p {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.footer-social-mobile li a {
+  text-transform: uppercase;
   color: #000000;
   text-decoration: none;
 }
@@ -941,7 +1058,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   width: 20px;
   margin: 0 0 0 auto;
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1170,7 +1287,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   top: 12px;
   width: 24px;
   height: 24px;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-plus.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-plus.svg");
   transition: all 0.8s ease;
 }
 .widget-filter li .berocket_single_filter_widget.open:before {
@@ -1248,7 +1365,11 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   color: #ffffff;
   transform: translate(-50%, 0);
 }
+.hero__wrapper .h4 {
+  display: none !important;
+}
 .hero__wrapper .h1 {
+  display: none;
   font-family: "maginiaregular";
   letter-spacing: -9.52px;
   font-weight: 100;
@@ -1768,10 +1889,10 @@ html.has-scroll-dragging {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-heart-black.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-heart-black.svg");
 }
 .custom-woocommerce ul .jvm_add_to_wishlist.in_wishlist .jvm_add_to_wishlist_heart:before {
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-heart-black-fill.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-heart-black-fill.svg");
 }
 .custom-woocommerce ul .cfvsw_variations_form {
   order: 3;
@@ -2166,7 +2287,7 @@ html.has-scroll-dragging {
   text-align: right;
   color: black;
   text-decoration: none;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
@@ -2842,11 +2963,11 @@ html.has-scroll-dragging {
 }
 .wishlist .product-remove a.remove {
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
 }
 .wishlist .product-remove a.remove:hover {
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
 }
 .wishlist .product-thumbnail img {
   width: 100px !important;
