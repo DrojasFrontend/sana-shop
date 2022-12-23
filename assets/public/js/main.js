@@ -84,48 +84,48 @@ jQuery(document).ready(function ($) {
 /***/ (() => {
 
 jQuery(document).ready(function ($) {
-  var $openMiniCart = $("[data-open-minicart]");
-  var $closeMiniCart = $("[data-close-minicart]");
-  var $dataHeader = $("[data-header]");
-  var $menuItem = $(".menu-item");
-  var $headerLogo = $(".header-logo");
-  var $dataToggleSearch = $("[data-toggle-search]");
-  var $dataFormMobile = $("[data-form-mobile]");
-  $menuItem.on("mouseover", function () {
-    $menuItem.parents(".header").addClass("is-hover");
-  }).on("mouseout", function () {
-    $menuItem.parents(".header").removeClass("is-hover");
+  var $openMiniCart = $('[data-open-minicart]');
+  var $closeMiniCart = $('[data-close-minicart]');
+  var $dataHeader = $('[data-header]');
+  var $menuItem = $('.menu-item');
+  var $headerLogo = $('.header-logo');
+  var $dataToggleSearch = $('[data-toggle-search]');
+  var $dataFormMobile = $('[data-form-mobile]');
+  $menuItem.on('mouseover', function () {
+    $menuItem.parents('.header').addClass('is-hover');
+  }).on('mouseout', function () {
+    $menuItem.parents('.header').removeClass('is-hover');
   });
 
   // MiniCart
-  $openMiniCart.on("click", function () {
-    $openMiniCart.addClass("open");
+  $openMiniCart.on('click', function () {
+    $openMiniCart.addClass('open');
     setTimeout(function () {
-      $closeMiniCart.addClass("active");
+      $closeMiniCart.addClass('active');
     }, 1000);
   });
-  $closeMiniCart.on("click", function () {
-    $openMiniCart.removeClass("open");
-    $closeMiniCart.removeClass("active");
+  $closeMiniCart.on('click', function () {
+    $openMiniCart.removeClass('open');
+    $closeMiniCart.removeClass('active');
   });
 
   // Scroll Header
-  $(window).on("scroll", function () {
+  $(window).on('scroll', function () {
     var $Scroll = $(document).scrollTop();
     if ($Scroll > 30) {
-      $dataHeader.addClass("scroll");
+      $dataHeader.addClass('scroll');
     } else {
-      $dataHeader.removeClass("scroll");
+      $dataHeader.removeClass('scroll');
     }
   });
 
   //Menu Mobile Search
-  $dataToggleSearch.on("click", function () {
+  $dataToggleSearch.on('click', function () {
     $headerLogo.fadeToggle();
-    $(".menu-mobile-search__close").fadeToggle();
-    $(".menu-mobile-search__search").fadeToggle();
-    $dataFormMobile.toggleClass("active");
-    console.log("click");
+    $('.menu-mobile-search__close').fadeToggle();
+    $('.menu-mobile-search__search').fadeToggle();
+    $dataFormMobile.toggleClass('active');
+    console.log('click');
   });
 
   // Menu Mobile Bottom

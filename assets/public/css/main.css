@@ -2629,7 +2629,9 @@ html.has-scroll-dragging {
   margin-bottom: 20px;
   line-height: 42px;
   text-transform: uppercase;
-  font-weight: 500;
+}
+.custom-product__summary .product_title span {
+  font-weight: 100;
 }
 .custom-product__summary .price {
   margin-bottom: 10px;
