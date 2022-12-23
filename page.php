@@ -38,6 +38,10 @@ get_header();
 			get_template_part( 'template-parts/content', 'page' );
 		endwhile; ?>
 
+		<!-- Menu Mobile -->
+			<?php get_template_part( 'template-parts/nav/menu-mobile' ); ?>
+		<!-- Menu Mobile -->
+
 	</main>
 <?php
 get_footer();

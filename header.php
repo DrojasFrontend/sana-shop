@@ -32,5 +32,6 @@
 			<?php get_template_part( 'template-parts/nav/logo' ); ?>
 			<?php get_template_part( 'template-parts/nav/main-menu' ); ?>
 			<?php get_template_part( 'template-parts/nav/menu-right' ); ?>
+			<?php get_template_part( 'template-parts/nav/search-mobile' ); ?>
 		</div>
 	</header>
