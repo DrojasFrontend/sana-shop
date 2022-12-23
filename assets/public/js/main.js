@@ -149,7 +149,13 @@ __webpack_require__.r(__webpack_exports__);
 if (document.querySelector('[data-scroll-container]')) {
   var scroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__["default"]({
     el: document.querySelector('[data-scroll-container]'),
-    smooth: true
+    smooth: true,
+    smartphone: {
+      smooth: true
+    },
+    tablet: {
+      smooth: true
+    }
   });
   var headerAnnouncement = document.getElementById('header-announcement');
   var header = document.getElementById('header');
