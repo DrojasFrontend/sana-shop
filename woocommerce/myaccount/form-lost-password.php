@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_lost_password_form' );
 ?>
 
-<div class="custom-woocommerce-reset">
+<div class="custom-woocommerce-reset" data-scroll-section>
 	<form method="post" class="woocommerce-ResetPassword lost_reset_password">
 		<h2>
 		recupera tu contraseña

@@ -8,6 +8,14 @@ var swiper2 = new Swiper(".swiper-full-image", {
   slidesPerView: "auto",
   freeMode: true,
   mousewheel: true,
+  allowTouchMove: false,
+
+  breakpoints: {
+    1024: {
+      allowTouchMove: true,
+    },
+  },
+
   scrollbar: {
     el: ".swiper-scrollbar",
   },
