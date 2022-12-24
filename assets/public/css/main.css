@@ -669,6 +669,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   z-index: 1;
   transition: all 0.8s ease;
 }
+.header .menu-mobile-search__close svg path {
+  stroke: #ffffff;
+}
 .header.scroll {
   top: 0;
   background-color: rgba(0, 0, 0, 0.1882352941);
