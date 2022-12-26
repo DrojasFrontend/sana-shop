@@ -279,19 +279,19 @@ html.has-scroll-dragging {
 
 @font-face {
   font-family: "work_sansregular";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/worksans.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/worksans.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/worksans.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/worksans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "maginiaregular";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/maginiaregular.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/maginiaregular.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/maginiaregular.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/maginiaregular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "suisse_intlultralight";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/suisse.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/suisse.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/suisse.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/suisse.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -346,7 +346,7 @@ body {
   width: 25px;
   height: 25px;
   border: 0;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/ico-close.svg");
+  background: url("http://localhost:10023/wp-content/uploads/ico-close.svg");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -1131,7 +1131,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   width: 20px;
   margin: 0 0 0 auto;
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1553,7 +1553,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   top: 12px;
   width: 24px;
   height: 24px;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-plus.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-plus.svg");
   transition: all 0.8s ease;
 }
 .widget-filter li .berocket_single_filter_widget.open:before {
@@ -2387,10 +2387,10 @@ html.has-scroll-dragging {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-heart-black.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-heart-black.svg");
 }
 .custom-woocommerce ul .jvm_add_to_wishlist.in_wishlist .jvm_add_to_wishlist_heart:before {
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-heart-black-fill.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-heart-black-fill.svg");
 }
 .custom-woocommerce ul .cfvsw_variations_form {
   order: 3;
@@ -2898,7 +2898,7 @@ html.has-scroll-dragging {
   text-align: right;
   color: #000000;
   text-decoration: none;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
@@ -3386,8 +3386,13 @@ html.has-scroll-dragging {
   display: none;
 }
 .custom-product-image__featured figure {
-  height: 665px;
+  height: 65vh;
   margin: 0;
+}
+@media only screen and (min-width: 1279px) {
+  .custom-product-image__featured figure {
+    height: 665px;
+  }
 }
 .custom-product-image__featured figure img {
   height: 100%;
@@ -3398,17 +3403,32 @@ html.has-scroll-dragging {
   }
 }
 .custom-product-image__gallery {
-  height: 665px;
+  height: 65vh;
   overflow: hidden;
 }
+@media only screen and (min-width: 1279px) {
+  .custom-product-image__gallery {
+    height: 665px;
+  }
+}
 .custom-product-image__gallery .swiper {
-  height: 665px;
+  height: 65vh;
+}
+@media only screen and (min-width: 1279px) {
+  .custom-product-image__gallery .swiper {
+    height: 665px;
+  }
 }
 .custom-product-image__gallery figure {
-  height: 665px;
+  height: 65vh;
   margin: 0;
   padding: 0 0 10px 0;
   background: #ffffff;
+}
+@media only screen and (min-width: 1279px) {
+  .custom-product-image__gallery figure {
+    height: 665px;
+  }
 }
 .custom-product-image__gallery figure:first-child, .custom-product-image__gallery figure:last-child {
   padding: 0;
@@ -3435,7 +3455,12 @@ html.has-scroll-dragging {
   opacity: 0;
 }
 .custom-product-image .swiper-full-image {
-  margin-top: -665px;
+  margin-top: -65vh;
+}
+@media only screen and (min-width: 1279px) {
+  .custom-product-image .swiper-full-image {
+    margin-top: -665px;
+  }
 }
 .custom-product-image__thumbnails {
   position: absolute;
@@ -3815,11 +3840,11 @@ html.has-scroll-dragging {
 }
 .wishlist .product-remove a.remove {
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
 }
 .wishlist .product-remove a.remove:hover {
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
 }
 .wishlist .product-thumbnail img {
   width: 100px !important;
