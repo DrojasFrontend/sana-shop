@@ -33,7 +33,7 @@
                               </a>
                             </li>
                           <?php endif; ?>
-                        <?php else: ?>
+                        <?php elseif ($thumbnailChild) : ?>
                           <li class="menu-mobile-fixed__sub-menu-picture">
                             <a href="<?php echo $child->url ?>">
                               <img src="<?php echo $thumbnailChild ?>" width="" alt="">

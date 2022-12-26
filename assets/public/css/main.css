@@ -1030,6 +1030,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header-transparent.scroll .menu-mobile-search .btn-search svg {
   fill: #ffffff;
 }
+.header-transparent.scroll .menu-mobile-fixed__btn svg path {
+  fill: #ffffff;
+}
 .header-transparent .menu-item a {
   color: #000000;
   transition: all 0.8s ease;
@@ -1087,6 +1090,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   stroke: #000000;
 }
 .header-transparent .menu-mobile-search .btn-search svg {
+  fill: #000000;
+}
+.header-transparent .menu-mobile-fixed__btn svg path {
   fill: #000000;
 }
 .header .shortcode-wrapper .wmc-content {
@@ -1352,9 +1358,11 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .menu-mobile-fixed__btn {
   display: block;
+  padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
+  transform: translateX(5px);
 }
 @media only screen and (min-width: 1200px) {
   .menu-mobile-fixed__btn {
@@ -1402,7 +1410,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   height: 100%;
 }
 .menu-mobile-fixed__nav .menu {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 100px 30px 0;
   overflow-y: auto;
@@ -1420,12 +1428,36 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .menu-mobile-fixed__sub-menu-pictures {
   display: flex;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: auto;
+}
+@media only screen and (min-width: 1200px) {
+  .menu-mobile-fixed__sub-menu-pictures {
+    width: auto;
+    overflow-x: inherit;
+  }
 }
 .menu-mobile-fixed__sub-menu-picture {
   display: inline-block;
   position: relative;
+}
+.menu-mobile-fixed__sub-menu-picture img {
+  max-width: 300px;
+  height: 300px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 1200px) {
+  .menu-mobile-fixed__sub-menu-picture img {
+    min-width: inherit;
+    min-height: inherit;
+    aspect-ratio: none;
+    -o-object-fit: none;
+       object-fit: none;
+  }
 }
 .menu-mobile-fixed__sub-menu-picture span {
   position: absolute;
