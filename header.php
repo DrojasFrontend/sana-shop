@@ -33,5 +33,10 @@
 			<?php get_template_part( 'template-parts/nav/main-menu' ); ?>
 			<?php get_template_part( 'template-parts/nav/menu-right' ); ?>
 			<?php get_template_part( 'template-parts/nav/search-mobile' ); ?>
+			<button type="button" class="menu-mobile-fixed__btn" data-open-menu-fixed>
+				<?php get_template_part('images/icons/menu'); ?>
+			</button>
 		</div>
 	</header>
+
+	<?php get_template_part( 'template-parts/nav/menu-fixed' ); ?>
