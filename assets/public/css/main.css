@@ -735,6 +735,12 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   background-color: #ffffff;
   border-bottom: 1px solid #B2B2B2;
 }
+.header.is-hover .header-logo .show {
+  opacity: 1;
+}
+.header.is-hover .header-logo .custom-logo-link {
+  opacity: 0;
+}
 .header.is-hover .menu-item a {
   color: #000000;
 }
@@ -779,6 +785,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
     height: auto;
   }
 }
+.header-logo {
+  position: relative;
+}
 .header-logo a {
   display: block;
   width: 100px;
@@ -787,6 +796,12 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   .header-logo a {
     width: auto;
   }
+}
+.header-logo .show {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .header-menu {
   display: none;
@@ -1029,6 +1044,12 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header-transparent {
   border-bottom: 1px solid #B2B2B2;
 }
+.header-transparent .show {
+  opacity: 1;
+}
+.header-transparent.scroll .show {
+  opacity: 0;
+}
 .header-transparent.scroll .menu-item a {
   color: #ffffff;
 }
@@ -1083,6 +1104,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .header-transparent.scroll .menu-mobile-fixed__btn svg path {
   fill: #ffffff;
+}
+.header-transparent.scroll.is-hover .menu-item a {
+  color: #000000;
 }
 .header-transparent .menu-item a {
   color: #000000;
