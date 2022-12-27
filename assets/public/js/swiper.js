@@ -7,7 +7,7 @@ var swiper2 = new Swiper(".swiper-full-image", {
   direction: 'vertical',
   slidesPerView: "auto",
   freeMode: true,
-  // mousewheel: true,
+  mousewheel: true,
   // allowTouchMove: false,
 
   // breakpoints: {

@@ -741,8 +741,12 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header.is-hover .header-logo .custom-logo-link {
   opacity: 0;
 }
+.header.is-hover .menu-item .menu-item-link:after {
+  background-color: #000000;
+}
 .header.is-hover .menu-item a {
   color: #000000;
+  transition: all 0.8s ease;
 }
 .header.is-hover .header-menu-right svg {
   fill: #000000;
@@ -765,10 +769,6 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .header.is-hover .header-menu-right__language .trp-language-switcher > div a {
   color: #000000;
-}
-.header.is-hover .menu-item a {
-  color: #000000;
-  transition: all 0.8s ease;
 }
 .header__wrapper {
   display: flex;
