@@ -2983,6 +2983,7 @@ html.has-scroll-dragging {
 .custom-woocommerce-cart__quantity .quantity input[type=number] {
   -moz-appearance: textfield;
   border-radius: 0 !important;
+  border: 1px solid #000000;
 }
 .custom-woocommerce-cart__remove {
   width: 100%;
@@ -3251,6 +3252,10 @@ html.has-scroll-dragging {
   margin-top: 20px;
 }
 
+.woocommerce-cart .header-menu-right__cart svg {
+  top: -10px;
+}
+
 .custom-product-category {
   position: relative;
   display: flex;
@@ -3364,7 +3369,7 @@ html.has-scroll-dragging {
 }
 .custom-woocommerce-login form.login .woocommerce-form__label, .custom-woocommerce-login form.register .woocommerce-form__label {
   position: relative;
-  padding-left: 10px;
+  padding: 6px 10px 6px 10px;
   cursor: pointer;
 }
 .custom-woocommerce-login form.login .woocommerce-form__label input, .custom-woocommerce-login form.register .woocommerce-form__label input {
@@ -3789,6 +3794,7 @@ html.has-scroll-dragging {
   font-family: "suisse_intlultralight";
   height: 40px;
   padding: 0 15px;
+  font-size: 14px;
   letter-spacing: 1px;
   border-radius: 0 !important;
   background: #000000 !important;
