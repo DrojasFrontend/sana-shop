@@ -3288,6 +3288,9 @@ html.has-scroll-dragging {
     padding: 50px 20px 80px;
   }
 }
+.custom-product-category + .term-description + .term-description {
+  display: none;
+}
 .custom-product-category + .term-description p {
   font-family: "suisse_intlultralight";
   font-size: 16px;
