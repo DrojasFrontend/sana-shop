@@ -2872,6 +2872,11 @@ html.has-scroll-dragging {
   }
 }
 
+.cfvsw-swatches-option {
+  min-width: 30px !important;
+  min-height: 30px !important;
+}
+
 .custom-woocommerce-cart {
   display: grid;
   width: 100%;
