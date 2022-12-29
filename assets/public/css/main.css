@@ -1687,17 +1687,21 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 
 .widget-filter {
+  display: none;
   width: 100%;
-  transition: all 0.8s ease;
+  padding: 0 20px;
   background-color: #ffffff;
   z-index: 1;
 }
 @media only screen and (min-width: 1024px) {
   .widget-filter {
+    display: block;
     position: absolute;
     top: 0;
     left: -100%;
     width: 290px;
+    padding: 0;
+    transition: all 0.8s ease;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1724,8 +1728,12 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   height: 24px;
   background: url("http://localhost:10023/wp-content/uploads/icon-plus.svg");
   transition: all 0.8s ease;
-  z-index: -1;
   rotate: 45deg;
+}
+@media only screen and (min-width: 1024px) {
+  .widget-filter .berocket_single_filter_widget .bapf_colaps_smb:after {
+    z-index: -1;
+  }
 }
 .widget-filter .berocket_single_filter_widget .bapf_ocolaps .bapf_colaps_smb:after {
   rotate: 0deg;
@@ -2452,15 +2460,25 @@ html.has-scroll-dragging {
   font-size: 20px;
   text-transform: uppercase;
 }
-.custom-woocommerce ul.custom-grid-products li.custom-grid-product a .swatchly_loop_variation_form {
-  order: 3;
-}
 .custom-woocommerce ul.custom-grid-products li.custom-grid-product .price {
   font-family: "suisse_intlultralight";
   margin: 0;
   font-size: 16px;
   color: #000000;
   order: 2;
+}
+.custom-woocommerce ul.custom-grid-products li.custom-grid-product .shopswatchinput {
+  font-family: "suisse_intlultralight";
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  order: 3;
+  margin-top: 5px;
+}
+.custom-woocommerce ul.custom-grid-products li.custom-grid-product .shopswatchinput:before {
+  content: "Colores";
+  display: block;
 }
 .custom-woocommerce ul .custom-grid-product__info {
   display: flex;
@@ -2571,7 +2589,7 @@ html.has-scroll-dragging {
 .custom-woocommerce-filter {
   position: absolute;
   top: -30px;
-  right: 30px;
+  right: 20px;
   border: 0;
   padding: 0;
   font-size: 18px;
