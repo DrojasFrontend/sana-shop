@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="custom-woocommerce<?php if ( !is_front_page() ) : echo ' custom-woocommerce-container'; endif; ?>" data-woocommerce-container>
+<div class="relative pb-100">
 	<?php if( is_post_type_archive() || is_product_category() || is_product_tag()) : ?>
 		<button type="button" class="custom-woocommerce-filter" data-open-filter-collection>
 			FILTRAR POR
@@ -28,4 +28,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- Filters -->
 		<?php get_sidebar(); ?>
 	<?php endif; ?>
-	<ul class="products custom-grid-products">
+
+	<div class="custom-woocommerce<?php if ( !is_front_page() ) : echo ' custom-woocommerce-container'; endif; ?>" data-woocommerce-container>
+		<ul class="products custom-grid-products">

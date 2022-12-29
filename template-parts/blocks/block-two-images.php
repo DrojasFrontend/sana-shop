@@ -11,7 +11,7 @@
               <div class="two-images__copy" style="color: <?php the_sub_field('color_text'); ?>">
                 <?php the_sub_field('heading'); ?>
                 <span style="border: 1px solid <?php the_sub_field('color_text'); ?>">
-                  AVAILABLE SOON
+                  DISPONIBLE PRONTO
                 </span>
               </div>
             <?php } else { ?>

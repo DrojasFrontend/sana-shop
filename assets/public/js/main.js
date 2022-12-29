@@ -61,16 +61,10 @@ jQuery(document).ready(function ($) {
   var openFilterCollection = $('[data-open-filter-collection]');
   var woocommerceContainer = $('[data-woocommerce-container]');
   var widgetFilter = $('[data-widget-filter]');
-  var bapfHeadfilter = $('.bapf_head');
   openFilterCollection.on('click', function () {
     woocommerceContainer.toggleClass('expanded');
     widgetFilter.toggleClass('active');
     openFilterCollection.toggleClass('active');
-  });
-  bapfHeadfilter.on('click', function (e) {
-    var current = $(e.currentTarget);
-    current.next().fadeToggle();
-    current.parent().parent().toggleClass('open');
   });
 });
 
@@ -154,6 +148,10 @@ jQuery(document).ready(function ($) {
   if ($(window).width() < 1200) {
     // $dataFormMobile.addClass("active");
   }
+  $('.bapf_head h3').on('click', function (e) {
+    var current = $(e.target);
+    console.log(current);
+  });
 
   //==================
 });

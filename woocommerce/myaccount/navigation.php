@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_account_navigation' );
 		if ( is_user_logged_in() ) {
 			$current_user = wp_get_current_user(); ?>
 			<span>
-				HELLO
+				HOLA
 			</span>
 			<p>
 				<?php  echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>
