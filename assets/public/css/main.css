@@ -563,6 +563,52 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   border: 1px solid #000000;
 }
 
+.error-404 {
+  text-align: center;
+  padding: 0 20px 50px 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .error-404 {
+    padding: 0 20px 100px 20px;
+  }
+}
+.error-404 h2 {
+  font-size: 45vw;
+  line-height: 45vw;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  .error-404 h2 {
+    font-size: 250px;
+    line-height: 250px;
+  }
+}
+.error-404 h3 {
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .error-404 h3 {
+    font-size: 30px;
+    list-style: 35px;
+  }
+}
+.error-404 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 50px;
+  margin: 30px auto 0 auto;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .footer {
   padding: 40px 0 80px;
 }
