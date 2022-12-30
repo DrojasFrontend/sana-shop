@@ -35,9 +35,13 @@
                     wc_get_template_part( 'content', 'product' );
                   endwhile;
                   woocommerce_product_loop_end();
-              } else {
-                echo __( 'No se encontraron productos' );
-              }
+              } else { ?>
+
+              <div data-scroll data-scroll-section style="text-align: center;padding: 0 20px">
+              <?php echo __( 'No se encontraron productos' ); ?>
+              </div>
+                
+              <?php }
               wp_reset_postdata();
             ?>
           </div>
