@@ -64,7 +64,30 @@
           'walker' => new MainNavMobileWalker()
           ])
       ?>
+        <li class="menu-mobile-fixed__menu-item"> 
+          <a href="" class="menu-mobile-fixed__menu-item-link">
+            Idioma
+          </a>
+        </li>
+        <?php $array = trp_custom_language_switcher();  ?>
+          <!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->    
+        <div class="language" data-no-translation>
+          <?php foreach ($array as $name => $item){ ?>
+            <li class="menu-mobile-fixed__menu-item">
+              <a class="menu-mobile-fixed__menu-item-link" href="<?php echo $item['current_page_url']?>" style="background-image: url(<?php echo $item['flag_link'] ?>)"> 
+                <span>
+                  <?php if( $item['language_code'] == 'es_CO') : ?>
+                    ESPAÑOL
+                  <?php else : ?>
+                    ENGLISH
+                  <?php endif; ?>
+                </span>
+              </a>
+            </li>
+          <?php } ?>
+        </div>
       </ul>
     </nav>
   </div>
+  
 </div>

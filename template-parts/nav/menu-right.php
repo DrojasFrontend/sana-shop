@@ -27,7 +27,25 @@
     <?php echo do_shortcode( '[woo-minicart]' ); ?>
   </div>
   <div class="header-menu-right__language">
-    <?php echo do_shortcode( '[language-switcher]' ); ?>
+    <a class="menu-item-link" href="#">
+      Idioma
+    </a>
+    <?php $array = trp_custom_language_switcher();  ?>
+    <ul class="" data-no-translation>
+      <?php foreach ($array as $name => $item){ ?>
+        <li class="">
+          <a class="" href="<?php echo $item['current_page_url']?>" style="background-image: url(<?php echo $item['flag_link'] ?>)"> 
+            <span>
+              <?php if( $item['language_code'] == 'es_CO') : ?>
+                ESPAÑOL
+              <?php else : ?>
+                ENGLISH
+              <?php endif; ?>
+            </span>
+          </a>
+        </li>
+      <?php } ?>
+    </ul>
     <?php get_template_part('images/icons/chevron-down'); ?>
   </div>
 </div>

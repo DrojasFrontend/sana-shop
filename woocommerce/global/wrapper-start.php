@@ -19,7 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 } ?>
 
-<div id="primary" class="content-area">
 	<?php if (is_product()) { ?>
 		<main id="main" class="custom-product-single__container" role="main">
 	<?php } else { ?>

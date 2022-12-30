@@ -536,6 +536,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .variations_form .selectedswatch.wcvaround {
   background-size: cover !important;
+  background-position: center;
 }
 .variations_form .selectedswatch.wcvasquare {
   color: #000000;
@@ -821,10 +822,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header.is-hover .header-menu-right__search #search::placeholder {
   color: #000000;
 }
-.header.is-hover .header-menu-right__language {
-  position: relative;
-}
-.header.is-hover .header-menu-right__language .trp-language-switcher > div a {
+.header.is-hover .header-menu-right__language .menu-item-link {
   color: #000000;
 }
 .header__wrapper {
@@ -1070,33 +1068,39 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header-menu-right__language {
   position: relative;
 }
-.header-menu-right__language .trp-language-switcher > div {
-  background: transparent;
-  border: 0;
-  padding: 0 15px 0 0;
+.header-menu-right__language:hover ul {
+  opacity: 1;
 }
-.header-menu-right__language .trp-language-switcher > div a {
-  font-family: "work_sansregular";
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+.header-menu-right__language .menu-item-link {
   text-transform: uppercase;
-  padding: 0;
   color: #ffffff;
   text-decoration: none;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  padding: 0 20px;
+  transition: all 0.8s ease;
 }
-.header-menu-right__language .trp-language-switcher > div a:hover {
-  background-color: transparent;
+.header-menu-right__language ul {
+  position: absolute;
+  left: -26px;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  padding: 10px 10px;
+}
+.header-menu-right__language li {
+  list-style: none;
+}
+.header-menu-right__language li a {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  text-decoration: none;
+  color: #000000;
 }
 .header-menu-right__language svg {
   position: absolute;
   top: 4px;
   right: 0;
-}
-.header-menu-right__language .trp-ls-shortcode-language {
-  height: 50px;
 }
 .header-transparent {
   border-bottom: 1px solid #B2B2B2;
@@ -1129,7 +1133,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header-transparent.scroll .header-menu-right__language {
   position: relative;
 }
-.header-transparent.scroll .header-menu-right__language .trp-language-switcher > div a {
+.header-transparent.scroll .header-menu-right__language .menu-item-link {
   color: #ffffff;
 }
 .header-transparent.scroll .menu-mobile-search input[type=text] {
@@ -1193,9 +1197,8 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .header-transparent .header-menu-right__language {
   position: relative;
 }
-.header-transparent .header-menu-right__language .trp-language-switcher > div a {
+.header-transparent .header-menu-right__language .menu-item-link {
   color: #000000;
-  transition: all 0.8s ease;
 }
 .header-transparent .menu-mobile-search input[type=text] {
   color: #000000;
@@ -1591,6 +1594,13 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
        object-fit: none;
   }
 }
+.menu-mobile-fixed__sub-menu-picture .picture-big {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: initial;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .menu-mobile-fixed__sub-menu-picture span {
   position: absolute;
   top: 0;
@@ -1601,6 +1611,17 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   width: 100%;
   height: 100%;
   color: #ffffff;
+}
+.menu-mobile-fixed .language {
+  padding-left: 20px;
+}
+.menu-mobile-fixed .language a {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.menu-mobile-fixed .language a.is-showing {
+  background-size: 20px;
 }
 
 .woocommerce-checkout .header-menu-right__cart svg {
@@ -2477,7 +2498,7 @@ html.has-scroll-dragging {
   margin-top: 5px;
 }
 .custom-woocommerce ul.custom-grid-products li.custom-grid-product .shopswatchinput:before {
-  content: "Colores";
+  content: "Color";
   display: block;
 }
 .custom-woocommerce ul .custom-grid-product__info {
@@ -3770,7 +3791,7 @@ html.has-scroll-dragging {
 @media only screen and (min-width: 1024px) {
   .custom-product__summary .product_title {
     margin-bottom: 20px;
-    font-size: 50px;
+    font-size: 38px;
     line-height: 42px;
   }
 }
