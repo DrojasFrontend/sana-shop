@@ -29,7 +29,7 @@
                           <?php if ($key == 0) : ?>
                             <li class="menu-mobile-fixed__sub-menu-picture">
                               <a href="<?php echo $item->url ?>">
-                                <img src="<?php echo $thumbnailItem ?>" width="" alt="">
+                                <img class="picture-big" src="<?php echo $thumbnailItem ?>" width="" alt="">
                               </a>
                             </li>
                           <?php endif; ?>
