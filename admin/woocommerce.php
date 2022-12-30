@@ -98,7 +98,5 @@ function custom_quantity_fields_script(){
 add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['downloads']); // Remove downloads item
     $items['customer-logout'] = __('Cerrar Session', 'sanna-shop');
-
-
     return $items;
 }, 99, 1 );

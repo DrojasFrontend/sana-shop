@@ -18,8 +18,12 @@
       <?php get_template_part('images/icons/heart'); ?>
     </a>
   </div>
-  <div class="header-menu-right__cart menu-mobile-down__btn" data-open-minicart>
-    <?php get_template_part('images/icons/add-to-bag'); ?>
-    <?php echo do_shortcode( '[woo-minicart]' ); ?>
+  <div class="menu-mobile-down__btn" data-open-minicart>
+    <a class="" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+      <?php get_template_part('images/icons/add-to-bag'); ?>
+      <span class="count">
+      <?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
+      </span>
+    </a>
   </div>
 </div>

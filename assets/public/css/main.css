@@ -1529,12 +1529,23 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   justify-content: center;
 }
 .menu-mobile-down__btn a {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu-mobile-down__btn .wmc-cart .wmc-count {
-  top: -4px;
+.menu-mobile-down__btn .count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #000000;
 }
 .menu-mobile-down__cart {
   top: 50%;
@@ -2033,6 +2044,8 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 
 .two-images__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
   margin: 0;
   padding: 0;
 }
