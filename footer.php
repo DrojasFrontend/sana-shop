@@ -51,8 +51,25 @@
 		</div>
 		<div class="footer-container">
 			<div class="footer-info">
-				
-				<?php dynamic_sidebar('Footer 1') ; ?> 
+				<div class="footer-language">
+					<h4>Idiomas</h4>
+					<?php $array = trp_custom_language_switcher();  ?>
+					<ul class="" data-no-translation>
+						<?php foreach ($array as $name => $item){ ?>
+							<li class="">
+								<a class="" href="<?php echo $item['current_page_url']?>" style="background-image: url(<?php echo $item['flag_link'] ?>)"> 
+									<span>
+										<?php if( $item['language_code'] == 'es_CO') : ?>
+											Español
+										<?php else : ?>
+											English
+										<?php endif; ?>
+									</span>
+								</a>
+							</li>
+						<?php } ?>
+					</ul>
+				</div>
 				<?php dynamic_sidebar('Footer 2') ; ?> 
 				<?php dynamic_sidebar('Footer 3') ; ?> 
 				<?php dynamic_sidebar('Footer 4') ; ?> 

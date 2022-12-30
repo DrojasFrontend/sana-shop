@@ -774,6 +774,19 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .footer-info input[type=checkbox]:checked ~ i {
   transform: translate(0px, 0) rotate(45deg);
 }
+.footer-info .footer-language ul {
+  margin: 0;
+  padding: 0;
+}
+.footer-info .footer-language ul li a {
+  font-family: "suisse_intlultralight";
+  background-repeat: no-repeat;
+  background-position: center left;
+  font-weight: 600;
+  padding-left: 27px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
 .footer-bottom {
   font-family: "suisse_intlultralight";
   padding-top: 50px;

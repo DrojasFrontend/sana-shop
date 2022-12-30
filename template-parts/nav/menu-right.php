@@ -28,7 +28,7 @@
   </div>
   <div class="header-menu-right__language">
     <a class="menu-item-link" href="#">
-      Idioma
+      Idiomas
     </a>
     <?php $array = trp_custom_language_switcher();  ?>
     <ul class="" data-no-translation>
