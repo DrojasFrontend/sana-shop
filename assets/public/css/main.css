@@ -2643,7 +2643,6 @@ html.has-scroll-dragging {
   display: block;
 }
 .custom-woocommerce ul.custom-grid-column li.custom-grid-product {
-  grid-column: span 1;
   opacity: 1;
   transform: translateY(0);
 }

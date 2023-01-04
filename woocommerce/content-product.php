@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class( 'custom-grid-product' ); ?> data-scroll>
+<li <?php wc_product_class( 'custom-grid-product' ); ?> data-scroll style="<?php if( is_front_page() ) : echo 'grid-column: span 1; opacity: 1; transform: translateY(0);'; endif; ?> ">
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
