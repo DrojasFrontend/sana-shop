@@ -30,4 +30,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<div class="custom-woocommerce<?php if ( !is_front_page() ) : echo ' custom-woocommerce-container'; endif; ?>" data-woocommerce-container>
-		<ul class="products custom-grid-products">
+		<ul class="products custom-grid-products <?php if( is_single() ) : echo 'custom-grid-column'; endif; ?>">

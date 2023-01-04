@@ -776,10 +776,27 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   }
 }
 .footer-info a {
+  position: relative;
   display: block;
+  width: -moz-max-content;
+  width: max-content;
   color: #000000;
   text-decoration: none;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-info a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    border-bottom: 2px solid #000000;
+    transition: all 0.5s ease-in;
+  }
+  .footer-info a:hover:before {
+    width: 100%;
+  }
 }
 .footer-info input[type=checkbox]:checked ~ .textwidget {
   max-height: 250px;
@@ -2624,6 +2641,10 @@ html.has-scroll-dragging {
 .custom-woocommerce ul.custom-grid-products li.custom-grid-product .shopswatchinput:before {
   content: "Color";
   display: block;
+}
+.custom-woocommerce ul.custom-grid-column li.custom-grid-product {
+  opacity: 1;
+  transform: translateY(0);
 }
 .custom-woocommerce ul .custom-grid-product__info {
   display: flex;
