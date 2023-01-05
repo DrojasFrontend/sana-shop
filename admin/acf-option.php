@@ -99,6 +99,20 @@ function register_acf_block_types()
 				'mode' => 'edit',
 			]
 		);
+
+		// Register Block Accordion.
+		acf_register_block_type(
+			[
+				'name' => 'block-accordion',
+				'title' => __('Block Accordion'),
+				'description' => __('Block Accordion.'),
+				'category' => 'formatting',
+				'icon' => 'images-alt2',
+				'keywords' => ['block', 'custom', 'image', 'quote'],
+				'render_template' => '/template-parts/blocks/block-accordion.php',
+				'mode' => 'edit',
+			]
+		);
 	}
 }
 

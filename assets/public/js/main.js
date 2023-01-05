@@ -1,6 +1,32 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/src/js/accordion.js":
+/*!************************************!*\
+  !*** ./assets/src/js/accordion.js ***!
+  \************************************/
+/***/ (() => {
+
+jQuery(document).ready(function ($) {
+  var $dataAccordionTitle = $('[data-accordion-title]');
+  var $dataAccordionContent = $('[data-accordion-content]');
+  var $dataAccordionRotate = $('[data-accordion-rotate]');
+  $dataAccordionTitle.on('click', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    if (!$this.hasClass('accordion__active')) {
+      $dataAccordionContent.slideUp(800);
+      $dataAccordionTitle.removeClass('accordion__active');
+      $dataAccordionRotate.removeClass('accordion__rotate');
+    }
+    $this.toggleClass('accordion__active');
+    $this.next().slideToggle();
+    $dataAccordionRotate.toggleClass('accordion__rotate');
+  });
+});
+
+/***/ }),
+
 /***/ "./assets/src/js/announcement.js":
 /*!***************************************!*\
   !*** ./assets/src/js/announcement.js ***!
@@ -3592,6 +3618,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tabs */ "./assets/src/js/tabs.js");
 /* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _locomotive_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./locomotive-scroll */ "./assets/src/js/locomotive-scroll.js");
+/* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./accordion */ "./assets/src/js/accordion.js");
+/* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_accordion__WEBPACK_IMPORTED_MODULE_6__);
 /**********************************
  * SASS
  **********************************/
@@ -3614,6 +3642,7 @@ jQuery(document).ready(function ($) {
     }
   }, 10);
 });
+
 
 
 
