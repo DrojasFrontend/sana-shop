@@ -1,4 +1,4 @@
-var swiper = new Swiper(".swiper-thumbnails", {
+let swiper = new Swiper(".swiper-thumbnails", {
   spaceBetween: 10,
   slidesPerView: 4,
   watchSlidesProgress: true,
@@ -8,13 +8,6 @@ var swiper2 = new Swiper(".swiper-full-image", {
   slidesPerView: "auto",
   freeMode: true,
   mousewheel: true,
-  // allowTouchMove: false,
-
-  // breakpoints: {
-  //   1024: {
-  //     allowTouchMove: true,
-  //   },
-  // },
 
   scrollbar: {
     el: ".swiper-scrollbar",
@@ -25,7 +18,7 @@ var swiper2 = new Swiper(".swiper-full-image", {
   },
 });
 
-var swiper2 = new Swiper(".swiper-full-image-mobile", {
+var swiper3 = new Swiper(".swiper-full-image-mobile", {
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 10,
@@ -36,9 +29,5 @@ var swiper2 = new Swiper(".swiper-full-image-mobile", {
     el: ".swiper-pagination",
     type: 'bullets',
     clickable: true,
-  },
-
-  thumbs: {
-    swiper: swiper,
-  },
+  }
 });
