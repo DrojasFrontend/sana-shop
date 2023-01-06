@@ -32,17 +32,26 @@ $wrapper_classes   = apply_filters(
 
 <div class="custom-product-image">
 	<div class="custom-product-image__featured">
-		<!-- <figure>
-			<img src="<?php  echo $featured_image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
-		</figure> -->
-			<figure class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?> woocommerce-product-gallery__wrapper">
-				<?php 
-					$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-					$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-					$html .= '</div>'; 
-				?>
-				<?php echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );?>
-			</figure>
+		
+		<div class="swiper swiper-full-image-mobile">
+			<div class="swiper-wrapper">
+				<figure class="swiper-slide <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?> woocommerce-product-gallery__wrapper">
+					<?php 
+						$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
+						$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+						$html .= '</div>'; 
+					?>
+					<?php echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );?>
+				</figure>
+				<?php foreach( $attachment_ids as $i => $attachment_id ) { ?>
+					<figure class="swiper-slide">
+						<img src="<?php echo $image_link = wp_get_attachment_url( $attachment_id ); ?>" alt="" data-id="<?php $attachment_id ?>">
+					</figure>
+				<?php } ?>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		
 	</div>
 	<div class="custom-product-image__gallery">
 		<?php foreach( $attachment_ids as $i => $attachment_id ) { ?>
