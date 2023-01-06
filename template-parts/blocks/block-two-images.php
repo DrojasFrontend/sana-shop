@@ -5,7 +5,9 @@
         <?php while( have_rows('repeater_two_images') ): the_row(); ?>
           <li data-scroll <?php if (get_sub_field('available_soon') == true ) { echo 'class="available-soon"'; } ?>>
             <figure data-scroll data-scroll-speed="-1.5">
-              <img src="<?php the_sub_field('image'); ?>" alt="">
+              <a href="<?php the_sub_field('cta_link') ?>">
+                <img src="<?php the_sub_field('image'); ?>" alt="">
+              </a>
             </figure>
             <?php if (get_sub_field('available_soon') == true ) {?> 
               <div class="two-images__copy" style="color: <?php the_sub_field('color_text'); ?>">

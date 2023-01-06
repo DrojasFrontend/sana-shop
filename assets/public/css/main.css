@@ -2097,6 +2097,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
     transform: scale(1);
   }
 }
+.two-images__wrapper li figure a {
+  display: block;
+}
 .two-images__wrapper li.available-soon p {
   font-size: 30px;
   line-height: 40px;
@@ -2822,6 +2825,7 @@ html.has-scroll-dragging {
   border: 0;
   padding: 0;
   font-size: 18px;
+  color: #000000;
   width: 227px;
   text-align: right;
   background: transparent;
