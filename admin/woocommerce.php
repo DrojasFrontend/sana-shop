@@ -97,6 +97,7 @@ function custom_quantity_fields_script(){
 // Custom Tab Account
 add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['downloads']); // Remove downloads item
+    $items['dashboard'] = __('Inicio', 'sanna-shop');
     $items['customer-logout'] = __('Cerrar Session', 'sanna-shop');
     return $items;
 }, 99, 1 );

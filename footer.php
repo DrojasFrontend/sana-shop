@@ -14,8 +14,8 @@
 	<footer id="colophon" class="footer" data-scroll-section>
 		<div class="footer-container">
 			<div class="footer-top">
-				<h2>Únete a nuestro <strong>BOLETIN INFORMATIVO</strong></h2>
-				<p>¡Suscríbete a nuestra newsletter y tendrás acceso a promociones exclusivas y mucho más!</p>
+				<h2><strong>CONOCE LAS ÚLTIMAS NOTICIAS DE SANNA</strong></h2>
+				<p>Suscríbete y sé parte de nuestros contactos más importantes. Tendrás acceso a información exclusiva y mucho más</p>
 				<!-- Begin Mailchimp Signup Form -->
 				<div id="mc_embed_signup">
 					<form action="https://sannaofficial.us13.list-manage.com/subscribe/post?u=6c9b8c80439723dc706679f5b&amp;id=e7af778304&amp;f_id=00e996e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
@@ -23,9 +23,9 @@
 							<div class="indicates-required"></div>
 							<div class="mc-field-group">
 								<div class="icon">
-									<?php get_template_part('images/icons/email'); ?>
+									<!-- <?php get_template_part('images/icons/email'); ?> -->
 								</div>
-								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Correo Electronico" required>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Correo Electrónico" required>
 								<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 							</div>
 							<div id="mce-responses">
@@ -57,7 +57,7 @@
 					<ul class="" data-no-translation>
 						<?php foreach ($array as $name => $item){ ?>
 							<li class="">
-								<a class="" href="<?php echo $item['current_page_url']?>" style="background-image: url(<?php echo $item['flag_link'] ?>)"> 
+								<a class="" href="<?php echo $item['current_page_url']?>"> 
 									<span>
 										<?php if( $item['language_code'] == 'es_CO') : ?>
 											Español

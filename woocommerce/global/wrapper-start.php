@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if (is_product()) { ?>
 		<main id="main" class="custom-product-single__container" role="main">
+	<?php } else if (is_product_category()) { ?>
+		<main id="main" role="main" data-scroll-section>
 	<?php } else { ?>
 		<main id="main" class="padding-top" role="main" data-scroll-section>
 	<?php } ?>

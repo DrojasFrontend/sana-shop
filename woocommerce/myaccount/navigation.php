@@ -24,7 +24,7 @@ do_action( 'woocommerce_before_account_navigation' );
 <div data-scroll-section class="custom-woocommerce-myaccount">
 	
 <nav class="woocommerce-MyAccount-navigation">
-	<div class="custom-woocommerce-myaccount__user">
+	<!-- <div class="custom-woocommerce-myaccount__user">
 	<?php  
 		if ( is_user_logged_in() ) {
 			$current_user = wp_get_current_user(); ?>
@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_account_navigation' );
 			echo 'HOLA VISITANTE!';
 			}
 		?>
-	</div>
+	</div> -->
 	<ul>
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">

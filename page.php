@@ -22,9 +22,9 @@ get_header();
 			</header>
 		<?php elseif (is_page(12) || is_page(13) || is_page(14)) : ?>
 			<header data-scroll-section class="custom-woocommerce-myaccount__header">
-				<h1 class="custom-woocommerce-myaccount__title"><?php single_post_title(); ?></h1>
+				<!-- <h1 class="custom-woocommerce-myaccount__title"><?php single_post_title(); ?></h1> -->
 			</header>
-			<hr class="line-gray" data-scroll-section>
+			<!-- <hr class="line-gray" data-scroll-section> -->
 		<?php endif; ?>
 		
 		<?php if (get_field('page_short_description')) : ?>

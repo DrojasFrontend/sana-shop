@@ -10,7 +10,7 @@
           <?php if ($children_elements[$item->ID]) { ?>
             <div class="sub-menu">
               <div class="sub-menu__wrapper">
-                <h3 class="<?php if($item->title === 'tienda' || $item->title === 'shop') : ?>h3-big <?php else : ?>h3-small<?php endif; ?>"><?php echo $item->title ?></h3>
+                <!-- <h3 class="<?php if($item->title === 'tienda' || $item->title === 'shop') : ?>h3-big <?php else : ?>h3-small<?php endif; ?>"><?php echo $item->title ?></h3> -->
                 <ul class="" role="tabpanel" aria-labelledby="<?php echo $item->title; ?>">
                   <?php foreach ($children_elements[$item->ID] as $child) { ?>
                     <li class="sub-menu-link">
