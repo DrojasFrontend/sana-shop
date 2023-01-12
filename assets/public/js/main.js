@@ -229,6 +229,9 @@ if (document.querySelector('[data-scroll-container]')) {
       newScrollPosition = lastScrollPosition;
     }
   });
+  new ResizeObserver(function () {
+    return scroll.update();
+  }).observe(document.querySelector('[data-scroll-container]'));
 }
 
 /***/ }),
