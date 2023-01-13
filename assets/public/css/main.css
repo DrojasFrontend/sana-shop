@@ -3379,7 +3379,7 @@ html.has-scroll-dragging {
   flex-direction: column-reverse;
   justify-content: center;
   row-gap: 10px;
-  border-top-color: #000000;
+  border-top-color: #000000 !important;
   text-align: center;
   padding: 20px !important;
   background: transparent;
