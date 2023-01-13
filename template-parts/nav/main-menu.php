@@ -29,9 +29,9 @@
                           <li class="sub-menu-picture picture-small">
                             <a href="<?php echo $child->url ?>">
                               <img src="<?php echo $thumbnail ?>" width="187px" alt="">
-                              <span>
+                              <!-- <span>
                                 <?php echo $child->title ?>
-                              </span>
+                              </span> -->
                             </a>
                           </li>  
                         <?php endif ?>

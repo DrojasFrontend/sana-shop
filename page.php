@@ -18,7 +18,7 @@ get_header();
 		
 		<?php if (! is_front_page() && !is_page(12) && !is_page(13) && !is_page(14)): ?>
 			<header data-scroll-section>
-				<h1 class="page-title"><?php single_post_title(); ?></h1>
+				<!-- <h1 class="page-title"><?php single_post_title(); ?></h1> -->
 			</header>
 		<?php elseif (is_page(12) || is_page(13) || is_page(14)) : ?>
 			<header data-scroll-section class="custom-woocommerce-myaccount__header">

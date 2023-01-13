@@ -25,7 +25,7 @@ global $post;
 			</li>
 		<?php endif; ?>
 
-		<?php if( have_rows('repeater_social_media', 'options') ): ?>
+		<!-- <?php if( have_rows('repeater_social_media', 'options') ): ?>
 			<li>
 				<input type="checkbox" checked>
 				<i>
@@ -40,7 +40,7 @@ global $post;
 					<?php endwhile; ?>
 				</p>
 			</li>
-		<?php endif; ?>
+		<?php endif; ?> -->
 	</ul>
 </div>
 

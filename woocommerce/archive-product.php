@@ -51,7 +51,9 @@ do_action( 'woocommerce_before_main_content' );
 				</p>
 			</div>
 		<?php else : ?>
-			<h1 class="custom-woocommerce-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+			<?php if (is_product_tag()) : ?>
+				<h1 class="custom-woocommerce-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+			<?php endif; ?>
 		<?php endif; ?>
 	<?php endif; ?>
 
