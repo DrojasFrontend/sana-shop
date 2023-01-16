@@ -497,6 +497,10 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .variations_form tr:nth-child(3) .label .wcva_selected_attribute {
   display: none;
 }
+.variations_form tr:nth-child(6) .value {
+  border-top: 1px solid !important;
+  padding-top: 20px;
+}
 .variations_form tr:nth-child(5) {
   display: none;
 }
