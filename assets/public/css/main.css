@@ -420,6 +420,21 @@ body {
 .custom-template p {
   margin-bottom: 20px;
 }
+.custom-template-tax .woocommerce-products-header {
+  margin-bottom: 100px;
+}
+.custom-template-tax .woocommerce .relative {
+  padding-bottom: 0 !important;
+}
+.custom-template-tax .woocommerce .custom-grid-products {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+.custom-template-tax .woocommerce .custom-grid-product {
+  grid-column: span 2 !important;
+}
+.custom-template-tax .woocommerce li.product {
+  width: 100% !important;
+}
 
 table.variations tr:nth-child(2) .cfvsw-swatches-container {
   flex-direction: column;
