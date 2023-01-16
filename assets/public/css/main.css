@@ -500,6 +500,10 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 .variations_form tr:nth-child(6) .value {
   border-top: 1px solid !important;
   padding-top: 20px;
+  padding-bottom: 0;
+}
+.variations_form tr:nth-child(6) .attribute-swatch {
+  padding-bottom: 4px;
 }
 .variations_form tr:nth-child(5) {
   display: none;
