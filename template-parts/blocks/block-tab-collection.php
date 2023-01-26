@@ -32,7 +32,7 @@
               if ( $loop->have_posts() ) {
                 woocommerce_product_loop_start();
                 while ( $loop->have_posts() ) : $loop->the_post();
-                    wc_get_template_part( 'content', 'product' );
+                    wc_get_template_part( 'content', 'custom-product' );
                   endwhile;
                   woocommerce_product_loop_end();
               } else { ?>

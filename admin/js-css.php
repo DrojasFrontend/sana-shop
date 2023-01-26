@@ -12,7 +12,7 @@ add_action('wp_enqueue_scripts', '_add_stylesheets');
 
 function _add_javascript() {
 	wp_enqueue_script('sanna-js', get_template_directory_uri() . '/assets/public/js/main.js', array(), _S_VERSION, true );
-	if (is_product()) {
+	if (is_front_page()) {
 		wp_enqueue_script('sanna-swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), _S_VERSION, true );
 		wp_enqueue_script('sanna-swiper-function-js', get_template_directory_uri() . '/assets/public/js/swiper.js', array(), _S_VERSION, true );
 	}

@@ -32,8 +32,33 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'custom-product-single-container', $product ); ?>>
+	<div class="custom-product-single-container__actions">
+		<a onclick="window.history.go(-1); return false;" href="#">
+			<?php get_template_part('images/icons/arrow-prev'); ?>
+		</a>
+		<a href="/carrito/" class="" data-open-minicart>
+			<?php get_template_part('images/icons/add-to-bag'); ?>
+			<?php 
+				$count = WC()->cart->get_cart_contents_count()
+			?>
+			<?php if($count > 0): ?>
+				<span>
+					<?php echo $count; ?>
+				</span>
+			<?php endif; ?>
 
+		</a>
+	</div>
 	<section class="custom-product__wrapper">
+		<?php
+			global $product;
+			$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );
+		?>
+		<div class="custom-product-image__featured">
+			<figure>
+				<img src="<?php  echo $featured_image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+			</figure>
+		</div>
 		<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.
@@ -76,3 +101,24 @@ if ( post_password_required() ) {
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+
+<?php
+$product_id = $product->get_id();
+$product_name = $product->get_name();
+$product_price = wc_price($product->get_price());
+?>
+<div class="custom-product-single-fixed-select" data-fixed-select>
+	<div class="custom-product-single-fixed-select__name">
+		<h3><?php echo $product_name ?></h3>
+		<span><?php echo $product_price ?></span>
+	</div>
+	<button type="submit" class="custom-product-single-fixed-select__add" data-open-select-size>
+		Seleccionar Talla
+	</button>
+	<div class="open-add-to-cart" data-open-add-to-cart>
+		<button class="open-add-to-cart__close" type="button" data-close-add-to-cart>
+			<?php get_template_part('images/icons/close-black'); ?>
+		</button>
+		<?php do_action( 'woocommerce_single_product_summary' ); ?>
+	</div>
+</div>

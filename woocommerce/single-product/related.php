@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products pb-100">
+	<section class="related products">
 		<h2 class="custom-product__heading h4 py-8 mb-40"><?php the_field('related_product_text', 'option'); ?></h2>
 		
 		<?php woocommerce_product_loop_start(); ?>
@@ -30,7 +30,7 @@ if ( $related_products ) : ?>
 					<?php if ( $key <= 2 ) : ?>
 						<?php $post_object = get_post( $related_product->get_id() );
 						setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-						wc_get_template_part( 'content', 'product' );?>
+						wc_get_template_part( 'content', 'custom-product' );?>
 					<?php endif; ?>
 
 			<?php endforeach; ?>

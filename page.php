@@ -16,9 +16,9 @@ get_header();
 ?>
 	<main id="primary" class="site-main <?php if ( is_page('637') || is_page( '289' ) || is_page( '294' ) || is_page( '302' ) || is_page( '963' ) || is_page( '989' ) ) : echo 'padding-top'; endif; ?>">
 		
-		<?php if (! is_front_page() && !is_page(12) && !is_page(13) && !is_page(14)): ?>
+		<?php if (is_page('envios') || is_page('devoluciones')): ?>
 			<header data-scroll-section>
-				<!-- <h1 class="page-title"><?php single_post_title(); ?></h1> -->
+				<h1 class="page-title"><?php single_post_title(); ?></h1>
 			</header>
 		<?php elseif (is_page(12) || is_page(13) || is_page(14)) : ?>
 			<header data-scroll-section class="custom-woocommerce-myaccount__header">

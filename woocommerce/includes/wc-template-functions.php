@@ -991,7 +991,7 @@ if ( ! function_exists( 'woocommerce_content' ) ) {
 				<?php if ( wc_get_loop_prop( 'total' ) ) : ?>
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
-						<?php wc_get_template_part( 'content', 'product' ); ?>
+						<?php wc_get_template_part( 'content', 'custom-product' ); ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
 

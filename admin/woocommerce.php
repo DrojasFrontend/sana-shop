@@ -101,3 +101,16 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     $items['customer-logout'] = __('Cerrar Session', 'sanna-shop');
     return $items;
 }, 99, 1 );
+
+add_filter( 'woocommerce_currencies', 'add_cw_currency' );
+function add_cw_currency( $cw_currency ) {
+     $cw_currency['CUSTOM PESO COLOMBIANO'] = __( 'CUSTOM PESO COLOMBIANO CURRECY', 'woocommerce' );
+     return $cw_currency;
+}
+add_filter('woocommerce_currency_symbol', 'add_cw_currency_symbol', 10, 2);
+function add_cw_currency_symbol( $custom_currency_symbol, $custom_currency ) {
+     switch( $custom_currency ) {
+         case 'CUSTOM PESO COLOMBIANO': $custom_currency_symbol = 'COP '; break;
+     }
+     return $custom_currency_symbol;
+}

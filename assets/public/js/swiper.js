@@ -18,16 +18,10 @@ var swiper2 = new Swiper(".swiper-full-image", {
   },
 });
 
-var swiper3 = new Swiper(".swiper-full-image-mobile", {
+var swiper3 = new Swiper(".swiper-tab-collection", {
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 10,
   freeMode: true,
   mousewheel: true,
-
-  pagination: {
-    el: ".swiper-pagination",
-    type: 'bullets',
-    clickable: true,
-  }
 });

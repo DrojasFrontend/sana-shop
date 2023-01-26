@@ -50,11 +50,11 @@
                           </li> 
                         <?php endif ?> 
                     <?php } ?>
-                  <?php elseif ($item->title === 'Ventas') :  ?>
+                  <?php elseif ($item->title === 'Sale') :  ?>
                     <?php $thumbnail = get_field('thumbnail', $item); ?>
                     <li class="sub-menu-picture">
                       <a href="<?php echo $item->url ?>">
-                        <img src="<?php echo $thumbnail ?>" width="550" alt="">
+                        <img src="<?php echo $thumbnail ?>" width="374" alt="">
                       </a>
                     </li> 
                   <?php endif ?>

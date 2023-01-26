@@ -1,8 +1,13 @@
-<div id="menu-mobile-down" class="menu-mobile" data-menu-mobile>
+<div id="menu-mobile-down" class="menu-mobile<?php if (is_product()): ?> is-hide<?php endif; ?>" data-menu-mobile>
   <div class="menu-mobile-down__btn">
     <a href="/">
       <?php get_template_part('images/icons/home'); ?>
     </a>
+  </div>
+  <div class="menu-mobile-down__btn">
+    <button type="button" class="menu-mobile-down__btn-button" data-open-menu-fixed>
+      <?php get_template_part('images/icons/menu'); ?>
+    </button>
   </div>
   <div class="menu-mobile-down__btn">
     <a href="/mi-cuenta">

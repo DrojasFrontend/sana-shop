@@ -236,6 +236,37 @@ if (document.querySelector('[data-scroll-container]')) {
 
 /***/ }),
 
+/***/ "./assets/src/js/select-size.js":
+/*!**************************************!*\
+  !*** ./assets/src/js/select-size.js ***!
+  \**************************************/
+/***/ (() => {
+
+jQuery(document).ready(function ($) {
+  var $dataFixedSelect = $('[data-fixed-select]');
+  var $dataOpenSelectSize = $('[data-open-select-size]');
+  var $dataOpenAddToCart = $('[data-open-add-to-cart]');
+  var $dataCloseAddToCart = $('[data-close-add-to-cart]');
+  $dataOpenSelectSize.on('click', function () {
+    $dataOpenAddToCart.addClass('is-open-add-to-cart');
+  });
+  $dataCloseAddToCart.on('click', function () {
+    $dataOpenAddToCart.removeClass('is-open-add-to-cart');
+  });
+  $('#chart-button').on('click', function () {
+    $('body').css('overflow', 'hidden');
+    $('.is-hide').css('z-index', -1);
+    $dataFixedSelect.css('z-index', -1);
+  });
+  $('#md-size-chart-modal').on('click', function () {
+    $('body').css('overflow', '');
+    $('.is-hide').css('z-index', 1);
+    $dataFixedSelect.css('z-index', 1);
+  });
+});
+
+/***/ }),
+
 /***/ "./assets/src/js/tabs.js":
 /*!*******************************!*\
   !*** ./assets/src/js/tabs.js ***!
@@ -3623,6 +3654,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _locomotive_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./locomotive-scroll */ "./assets/src/js/locomotive-scroll.js");
 /* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./accordion */ "./assets/src/js/accordion.js");
 /* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_accordion__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _select_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./select-size */ "./assets/src/js/select-size.js");
+/* harmony import */ var _select_size__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_select_size__WEBPACK_IMPORTED_MODULE_7__);
 /**********************************
  * SASS
  **********************************/
@@ -3645,6 +3678,7 @@ jQuery(document).ready(function ($) {
     }
   }, 10);
 });
+
 
 
 

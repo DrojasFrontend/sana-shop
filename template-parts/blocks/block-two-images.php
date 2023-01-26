@@ -3,7 +3,7 @@
     <?php if( have_rows('repeater_two_images') ): ?>
       <ul class="two-images__wrapper">
         <?php while( have_rows('repeater_two_images') ): the_row(); ?>
-          <li data-scroll <?php if (get_sub_field('available_soon') == true ) { echo 'class="available-soon"'; } ?>>
+          <li data-scroll <?php if (get_sub_field('available_soon') == true ) { echo 'class="available-soon"'; } else { echo 'class="is-available"'; } ?>>
             <figure data-scroll data-scroll-speed="-1.5">
               <a href="<?php the_sub_field('cta_link') ?>">
                 <img src="<?php the_sub_field('image'); ?>" alt="">

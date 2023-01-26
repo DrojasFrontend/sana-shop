@@ -74,7 +74,7 @@
         <div class="language" data-no-translation>
           <?php foreach ($array as $name => $item){ ?>
             <li class="menu-mobile-fixed__menu-item">
-              <a class="menu-mobile-fixed__menu-item-link" href="<?php echo $item['current_page_url']?>" style="background-image: url(<?php echo $item['flag_link'] ?>)"> 
+              <a class="menu-mobile-fixed__menu-item-link" href="<?php echo $item['current_page_url']?>"> 
                 <span>
                   <?php if( $item['language_code'] == 'es_CO') : ?>
                     ESPAÑOL

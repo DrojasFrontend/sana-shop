@@ -34,7 +34,7 @@
     <ul class="" data-no-translation>
       <?php foreach ($array as $name => $item){ ?>
         <li class="">
-          <a class="" href="<?php echo $item['current_page_url']?>" style="background-image: url(<?php echo $item['flag_link'] ?>)"> 
+          <a class="" href="<?php echo $item['current_page_url']?>"> 
             <span>
               <?php if( $item['language_code'] == 'es_CO') : ?>
                 ESPAÑOL

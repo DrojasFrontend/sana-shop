@@ -27,22 +27,26 @@
 	<?php if(is_front_page()) : ?>
 		<div class="loader">
 			<div class="loader-box"></div>
+			<h2 class="loader-logo">sanna</h2>
 			<span class="loader-text"></span>
 		</div>
 	<?php endif; ?>
 	<button type="button" class="close-mini-cart" data-close-minicart></button>
 
-	<?php get_template_part( 'template-parts/nav/announcement' ); ?>
-	<header id="header" class="header<?php if (!is_front_page() && !is_product_category()) : echo ' header-transparent'; endif; ?>" <?php if (is_product()) : echo 'data-header'; endif; ?>>
-		<div class="header__wrapper">
-			<?php get_template_part( 'template-parts/nav/logo' ); ?>
-			<?php get_template_part( 'template-parts/nav/main-menu' ); ?>
-			<?php get_template_part( 'template-parts/nav/menu-right' ); ?>
-			<?php get_template_part( 'template-parts/nav/search-mobile' ); ?>
-			<button type="button" class="menu-mobile-fixed__btn" data-open-menu-fixed>
-				<?php get_template_part('images/icons/menu'); ?>
-			</button>
-		</div>
-	</header>
+	<!-- Hide if is product -->
+	<div class="<?php if (is_product()): ?>is-hide<?php endif; ?>">
+		<?php get_template_part( 'template-parts/nav/announcement' ); ?>
+		<header id="header" class="header<?php if (!is_front_page() && !is_product_category()) : echo ' header-transparent'; endif; ?>" <?php if (is_product()) : echo 'data-header'; endif; ?>>
+			<div class="header__wrapper">
+				<?php get_template_part( 'template-parts/nav/logo' ); ?>
+				<?php get_template_part( 'template-parts/nav/main-menu' ); ?>
+				<?php get_template_part( 'template-parts/nav/menu-right' ); ?>
+				<?php get_template_part( 'template-parts/nav/search-mobile' ); ?>
+				<!-- <button type="button" class="menu-mobile-fixed__btn" data-open-menu-fixed>
+					<?php get_template_part('images/icons/menu'); ?>
+				</button> -->
+			</div>
+		</header>
+	</div>
 
 	<?php get_template_part( 'template-parts/nav/menu-fixed' ); ?>
