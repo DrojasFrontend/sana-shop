@@ -38,9 +38,9 @@ get_header();
 			get_template_part( 'template-parts/content', 'page' );
 		endwhile; ?>
 
-		<!-- Menu Mobile -->
+		<!-- Menu Mobile Bottom-->
 			<?php get_template_part( 'template-parts/nav/menu-mobile' ); ?>
-		<!-- Menu Mobile -->
+		<!-- Menu Mobile Bottom -->
 
 	</main>
 <?php

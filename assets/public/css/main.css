@@ -194,19 +194,19 @@ p {
 
 @font-face {
   font-family: "work_sansregular";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/worksans.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/worksans.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/worksans.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/worksans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "maginiaregular";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/maginiaregular.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/maginiaregular.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/maginiaregular.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/maginiaregular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "suisse_intlultralight";
-  src: url("https://dev.sannaofficial.com/wp-content/uploads/suisse.woff2") format("woff2"), url("https://dev.sannaofficial.com/wp-content/uploads/suisse.woff") format("woff");
+  src: url("http://localhost:10023/wp-content/uploads/suisse.woff2") format("woff2"), url("http://localhost:10023/wp-content/uploads/suisse.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -336,7 +336,7 @@ body {
   width: 25px;
   height: 25px;
   border: 0;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/ico-close.svg");
+  background: url("http://localhost:10023/wp-content/uploads/ico-close.svg");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -395,9 +395,16 @@ body {
   width: 100%;
   height: 40px;
   font-size: 16px;
-  text-align: center;
+  padding-left: 30px;
+  text-align: left;
   border-radius: 0;
   border: 1px solid #000000;
+}
+@media only screen and (min-width: 1024px) {
+  #mc_embed_signup_scroll input[type=email] {
+    text-align: center;
+    padding: 0;
+  }
 }
 #mc_embed_signup_scroll input[type=submit] {
   color: #000000;
@@ -1433,7 +1440,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   width: 20px;
   margin: 0 0 0 auto;
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1959,7 +1966,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   top: 12px;
   width: 24px;
   height: 24px;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-plus.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-plus.svg");
   transition: all 0.8s ease;
   rotate: 45deg;
 }
@@ -2362,25 +2369,25 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   }
 }
 .image-text__wrapper {
+  width: 100%;
   padding: 0 20px;
 }
 @media only screen and (min-width: 1024px) {
   .image-text__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 .image-text__copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 0 0 0;
+  padding: 30px 0 0 0;
   background-color: #ffffff;
 }
 @media only screen and (min-width: 1024px) {
   .image-text__copy {
-    padding: 0 60px;
+    padding: 60px 0 0 0;
   }
 }
 .image-text__copy p {
@@ -2966,10 +2973,10 @@ html.has-scroll-dragging {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-heart-black.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-heart-black.svg");
 }
 .custom-woocommerce ul .jvm_add_to_wishlist.in_wishlist .jvm_add_to_wishlist_heart:before {
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-heart-black-fill.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-heart-black-fill.svg");
 }
 .custom-woocommerce ul .cfvsw_variations_form {
   order: 3;
@@ -3495,7 +3502,7 @@ html.has-scroll-dragging {
   text-align: right;
   color: #000000;
   text-decoration: none;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
@@ -4967,11 +4974,11 @@ html.has-scroll-dragging {
 }
 .wishlist .product-remove a.remove {
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
 }
 .wishlist .product-remove a.remove:hover {
   color: transparent !important;
-  background: url("https://dev.sannaofficial.com/wp-content/uploads/icon-remove.svg");
+  background: url("http://localhost:10023/wp-content/uploads/icon-remove.svg");
 }
 .wishlist .product-thumbnail img {
   width: 100px !important;
@@ -5054,5 +5061,167 @@ html.has-scroll-dragging {
   .page-description p {
     font-size: 80px;
     line-height: 70px;
+  }
+}
+
+.page-template-contacto {
+  padding: 60px 0 0;
+}
+@media only screen and (min-width: 1200px) {
+  .page-template-contacto {
+    padding: 110px 0 0;
+  }
+}
+.page-contacto__title {
+  font-family: "maginiaregular";
+  padding: 22px 0 18px 0;
+  text-align: center;
+  font-size: 40px;
+  line-height: 30px;
+  font-weight: normal;
+  letter-spacing: -3.03px;
+}
+@media only screen and (min-width: 1200px) {
+  .page-contacto__title {
+    font-size: 70px;
+    line-height: 90px;
+    border-bottom: 1px solid #B2B2B2;
+  }
+}
+.page-contacto hr {
+  border-bottom: 1px solid #B2B2B2;
+}
+.page-contacto__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .page-contacto__wrapper {
+    width: 800px;
+  }
+}
+.page-contacto__wrapper fieldset {
+  border: 0;
+}
+.page-contacto__wrapper fieldset br {
+  display: none;
+}
+.page-contacto__wrapper .form-group {
+  display: grid;
+}
+@media only screen and (min-width: 1200px) {
+  .page-contacto__wrapper .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+}
+.page-contacto__wrapper input[type=text],
+.page-contacto__wrapper input[type=email],
+.page-contacto__wrapper input[type=tel],
+.page-contacto__wrapper textarea {
+  font-family: "suisse_intlultralight";
+  color: #000000;
+  width: 100%;
+  border: 0;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+  padding: 5px 0 15px 0;
+  border-bottom: 1px solid #B2B2B2;
+}
+.page-contacto__wrapper input[type=text]::-moz-placeholder, .page-contacto__wrapper input[type=email]::-moz-placeholder, .page-contacto__wrapper input[type=tel]::-moz-placeholder, .page-contacto__wrapper textarea::-moz-placeholder {
+  color: #000000;
+}
+.page-contacto__wrapper input[type=text]::placeholder,
+.page-contacto__wrapper input[type=email]::placeholder,
+.page-contacto__wrapper input[type=tel]::placeholder,
+.page-contacto__wrapper textarea::placeholder {
+  color: #000000;
+}
+.page-contacto__wrapper label {
+  font-family: "suisse_intlultralight";
+  color: #000000;
+}
+.page-contacto__wrapper textarea {
+  margin-top: 10px;
+  border: 1px solid #B2B2B2;
+}
+.page-contacto__wrapper input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  color: #ffffff;
+  border: 0;
+  text-transform: uppercase;
+  background-color: #000000;
+  cursor: pointer;
+}
+.page-contacto__grid {
+  display: grid;
+  row-gap: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .page-contacto__grid {
+    grid-template-columns: 1fr 1fr;
+    width: 800px;
+  }
+}
+.page-contacto__grid p {
+  font-family: "suisse_intlultralight";
+  margin-bottom: 2px;
+}
+@media only screen and (min-width: 1024px) {
+  .page-contacto__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.page-contacto__grid strong {
+  text-transform: uppercase;
+}
+.page-contacto .wpcf7 form.invalid .wpcf7-response-output,
+.page-contacto .wpcf7 form.unaccepted .wpcf7-response-output,
+.page-contacto .wpcf7 form.payment-required .wpcf7-response-output {
+  font-family: "suisse_intlultralight";
+  padding: 10px;
+  border-color: #000000;
+  text-align: center;
+  border: 1px solid #000000;
+  font-size: 13px;
+}
+@media only screen and (min-width: 1024px) {
+  .page-contacto .wpcf7 form.invalid .wpcf7-response-output,
+  .page-contacto .wpcf7 form.unaccepted .wpcf7-response-output,
+  .page-contacto .wpcf7 form.payment-required .wpcf7-response-output {
+    font-size: 16px;
+  }
+}
+.page-contacto .wpcf7-not-valid-tip {
+  font-family: "suisse_intlultralight";
+  font-size: 12px;
+  font-weight: 800;
+}
+.page-contacto .wpcf7-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  margin: 0;
+}
+.page-contacto .wpcf7 form.sent .wpcf7-response-output {
+  font-family: "suisse_intlultralight";
+  padding: 10px;
+  border-color: #000000;
+  border: 1px solid #000000;
+  text-align: center;
+  font-size: 13px;
+}
+@media only screen and (min-width: 1024px) {
+  .page-contacto .wpcf7 form.sent .wpcf7-response-output {
+    font-size: 16px;
   }
 }

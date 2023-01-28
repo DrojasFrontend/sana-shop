@@ -205,30 +205,34 @@ if (document.querySelector('[data-scroll-container]')) {
   var newScrollPosition = 0;
   var lastScrollPosition;
   var menuMobileDown = document.getElementById('menu-mobile-down');
-  scroll.on('scroll', function (instance) {
-    if (instance.scroll.y > 20) {
-      header.classList.add('scroll');
-      headerAnnouncement.classList.add('top');
-    } else {
-      header.classList.remove('scroll');
-      headerAnnouncement.classList.remove('top');
-    }
-    if (jQuery(window).width() < 1200) {
-      lastScrollPosition = instance.scroll.y;
+  if(menuMobileDown) {
 
-      // Scrolling down
-      if (newScrollPosition < lastScrollPosition && lastScrollPosition > 30) {
-        menuMobileDown.classList.remove('slideDown');
-        menuMobileDown.classList.add('slideUp');
-
-        // Scrolling up
-      } else if (newScrollPosition > lastScrollPosition) {
-        menuMobileDown.classList.remove('slideUp');
-        menuMobileDown.classList.add('slideDown');
+    scroll.on('scroll', function (instance) {
+      if (instance.scroll.y > 20) {
+        header.classList.add('scroll');
+        headerAnnouncement.classList.add('top');
+      } else {
+        header.classList.remove('scroll');
+        headerAnnouncement.classList.remove('top');
       }
-      newScrollPosition = lastScrollPosition;
-    }
-  });
+      if (jQuery(window).width() < 1200) {
+        lastScrollPosition = instance.scroll.y;
+  
+        // Scrolling down
+        if (newScrollPosition < lastScrollPosition && lastScrollPosition > 30) {
+          menuMobileDown.classList.remove('slideDown');
+          menuMobileDown.classList.add('slideUp');
+  
+          // Scrolling up
+        } else if (newScrollPosition > lastScrollPosition) {
+          menuMobileDown.classList.remove('slideUp');
+          menuMobileDown.classList.add('slideDown');
+        }
+        newScrollPosition = lastScrollPosition;
+      }
+    });
+  }
+
   new ResizeObserver(function () {
     return scroll.update();
   }).observe(document.querySelector('[data-scroll-container]'));

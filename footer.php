@@ -14,7 +14,7 @@
 	<footer id="colophon" class="footer" data-scroll-section>
 		<div class="footer-container">
 			<div class="footer-top">
-				<h2><strong>CONOCE LAS ÚLTIMAS NOTICIAS</strong></h2>
+				<h2>CONOCE LAS ÚLTIMAS<strong> NOTICIAS</strong></h2>
 				<p>Suscríbete y sé parte de nuestros contactos más importantes. Tendrás acceso a información exclusiva y mucho más</p>
 				<!-- Begin Mailchimp Signup Form -->
 				<div id="mc_embed_signup">

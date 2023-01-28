@@ -21,6 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 
 </main>
-<!-- Menu Mobile -->
+<!-- Menu Mobile Bottom -->
 <?php get_template_part( 'template-parts/nav/menu-mobile' ); ?>
-	<!-- Menu Mobile -->
+<!-- Menu Mobile Bottom -->
