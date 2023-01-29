@@ -25,11 +25,11 @@
 
 <div <?php if (!is_product()) : echo 'data-scroll-container'; endif; ?> >
 	<?php if(is_front_page()) : ?>
-		<!-- <div class="loader">
+		<div class="loader">
 			<div class="loader-box"></div>
 			<h2 class="loader-logo">sanna</h2>
 			<span class="loader-text"></span>
-		</div> -->
+		</div>
 	<?php endif; ?>
 	<button type="button" class="close-mini-cart" data-close-minicart></button>
 
