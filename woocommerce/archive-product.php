@@ -34,6 +34,7 @@ do_action( 'woocommerce_before_main_content' );
 		<?php 
 			$get_term = get_queried_object();
 			$get_heading = get_field('heading', $get_term);
+			$get_description = get_field('description', $get_term);
 			$get_background = get_field('background', $get_term);
 		?>
 
@@ -47,7 +48,7 @@ do_action( 'woocommerce_before_main_content' );
 			</div>
 			<div class="term-description">
 				<p>
-					<?php echo $get_term->description; ?>
+					<?php echo $get_description; ?>
 				</p>
 			</div>
 		<?php else : ?>

@@ -56,36 +56,54 @@
 
     <nav class="menu-mobile-fixed__nav">
       <ul class="menu">
-      <?php
-        wp_nav_menu([
-          'theme_location' => 'header-menu', 
-          'container_class' => '' ,
-          'menu_class' => '',
-          'walker' => new MainNavMobileWalker()
-          ])
-      ?>
-        <li class="menu-mobile-fixed__menu-item"> 
+        <?php
+          wp_nav_menu([
+            'theme_location' => 'header-menu', 
+            'container_class' => '' ,
+            'menu_class' => '',
+            'walker' => new MainNavMobileWalker()
+            ])
+        ?>
+      </ul>
+      <ul class="menu-bottom">
+        <li class="menu-mobile-fixed__menu-item">
+          <a href="#" class="menu-mobile-fixed__menu-item-link menu-mobile-fixed__menu-item-banner">
+            <img src="<?php the_field('banner_menu_mobile', 'option'); ?>" alt="">
+            <div class="summary">
+              <p class="heading-small"><?php the_field('banner_menu_heading', 'option'); ?> </p>
+              <p class="heading-large"><?php the_field('banner_menu_title', 'option'); ?> </p>
+            </div>
+          </a>
+        </li>
+        <li class="menu-mobile-fixed__menu-item has-child language"> 
           <a href="" class="menu-mobile-fixed__menu-item-link">
             Idioma
           </a>
+          <button type="button">
+            <?php get_template_part('images/icons/arrow-down-thin'); ?>
+          </button>
+          <div class="menu-mobile-fixed__sub-menu">
+            <ul class="menu-mobile-fixed__sub-menu-pictures" role="tabpanel" aria-labelledby="<?php echo $item->title; ?>" style="display:none;">
+              <?php $array = trp_custom_language_switcher();  ?>
+              <!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->    
+              <div class="language-wrapper" data-no-translation>
+                <?php foreach ($array as $name => $item){ ?>
+                  <li class="menu-mobile-fixed__menu-item">
+                    <a class="menu-mobile-fixed__menu-item-link" href="<?php echo $item['current_page_url']?>"> 
+                      <span>
+                        <?php if( $item['language_code'] == 'es_CO') : ?>
+                          ESPAÑOL
+                        <?php else : ?>
+                          ENGLISH
+                        <?php endif; ?>
+                      </span>
+                    </a>
+                  </li>
+                <?php } ?>
+              </div>
+            </ul>
+          </div>
         </li>
-        <?php $array = trp_custom_language_switcher();  ?>
-          <!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->    
-        <div class="language" data-no-translation>
-          <?php foreach ($array as $name => $item){ ?>
-            <li class="menu-mobile-fixed__menu-item">
-              <a class="menu-mobile-fixed__menu-item-link" href="<?php echo $item['current_page_url']?>"> 
-                <span>
-                  <?php if( $item['language_code'] == 'es_CO') : ?>
-                    ESPAÑOL
-                  <?php else : ?>
-                    ENGLISH
-                  <?php endif; ?>
-                </span>
-              </a>
-            </li>
-          <?php } ?>
-        </div>
       </ul>
     </nav>
   </div>
