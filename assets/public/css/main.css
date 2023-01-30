@@ -1765,6 +1765,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   display: block;
   text-decoration: none;
 }
+.menu-mobile-fixed__nav .menu .bold {
+  font-weight: bold;
+}
 .menu-mobile-fixed__nav .menu-bottom {
   margin: 0;
   padding: 60px 0 20px 0;
@@ -2115,6 +2118,9 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
   font-family: "maginiaregular";
   font-weight: 100;
 }
+.hero__wrapper .h4 {
+  font-weight: 100;
+}
 .hero__video {
   position: absolute;
   top: 0;
@@ -2176,7 +2182,7 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
 }
 .tabs-collections .tabs__navigation {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   justify-content: center;
   gap: 10px;
   margin: 0;

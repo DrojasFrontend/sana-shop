@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-	<main id="primary" class="site-main <?php if ( is_page('637') || is_page( '289' ) || is_page( '294' ) || is_page( '302' ) || is_page( '963' ) || is_page( '989' ) ) : echo 'padding-top'; endif; ?>">
+	<main id="primary" class="site-main <?php if ( is_page('nuevo') || is_page( 'nosotros' ) || is_page( 'sale' ) || is_page( 'lista-de-deseos' ) || is_page( 'envios' ) || is_page( 'devoluciones' ) ) : echo 'padding-top'; endif; ?>">
 		
 		<?php if (is_page('envios') || is_page('devoluciones')): ?>
 			<header data-scroll-section>
