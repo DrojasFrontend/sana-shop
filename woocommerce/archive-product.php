@@ -47,9 +47,7 @@ do_action( 'woocommerce_before_main_content' );
 				<?php endif; ?>
 			</div>
 			<div class="term-description">
-				<p>
-					<?php echo $get_description; ?>
-				</p>
+				<?php echo $get_description; ?>
 			</div>
 		<?php else : ?>
 			<?php if (is_product_tag()) : ?>

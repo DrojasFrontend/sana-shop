@@ -3884,6 +3884,7 @@ html.has-scroll-dragging {
 .custom-product-category + .term-description p {
   font-family: "suisse_intlultralight";
   font-size: 16px;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 1024px) {
   .custom-product-category + .term-description p {
@@ -5085,6 +5086,12 @@ html.has-scroll-dragging {
 }
 .custom-product-single-fixed-select .open-add-to-cart.is-open-add-to-cart {
   top: -70px;
+}
+
+.variations_form .woocommerce-variation-price .price {
+  opacity: 0;
+  height: 0;
+  font-size: 0 !important;
 }
 
 .wishlist {
