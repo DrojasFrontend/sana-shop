@@ -2440,6 +2440,10 @@ table.variations tr:nth-child(2) .cfvsw-swatches-container {
     display: block;
   }
 }
+.tabs-collections .tabs__body .variations li:nth-child(2),
+.tabs-collections .tabs__body .variations li:nth-child(3) {
+  display: none !important;
+}
 
 .two-images__wrapper {
   display: flex;
