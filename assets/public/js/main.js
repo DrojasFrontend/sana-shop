@@ -302,20 +302,20 @@ jQuery(document).ready(function ($) {
 
 var tabs = document.querySelectorAll('.tabs__btn');
 var tabsContent = document.querySelectorAll('.tabs__body');
+function hideTabContent() {
+  tabsContent.forEach(function (item) {
+    item.classList.remove('active');
+  });
+  tabs.forEach(function (item) {
+    item.classList.remove('active');
+  });
+}
+function showTabContent() {
+  var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  tabsContent[i].classList.add('active');
+  tabs[i].classList.add('active');
+}
 if (tabsContent.length > 0 || tabs.length > 0) {
-  function hideTabContent() {
-    tabsContent.forEach(function (item) {
-      item.classList.remove('active');
-    });
-    tabs.forEach(function (item) {
-      item.classList.remove('active');
-    });
-  }
-  function showTabContent() {
-    var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    tabsContent[i].classList.add('active');
-    tabs[i].classList.add('active');
-  }
   hideTabContent();
   showTabContent();
   tabs.forEach(function (tab, index) {
