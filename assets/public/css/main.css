@@ -5178,6 +5178,13 @@ html.has-scroll-dragging {
     padding: 0 15px !important;
   }
 }
+.custom-product__perfect-combine .variations .veb-variation-items-wrapper:nth-child(2), .custom-product__perfect-combine .variations .veb-variation-items-wrapper:nth-child(3),
+.related .variations .veb-variation-items-wrapper:nth-child(2),
+.related .variations .veb-variation-items-wrapper:nth-child(3),
+.custom-grid-product__addtocart .variations .veb-variation-items-wrapper:nth-child(2),
+.custom-grid-product__addtocart .variations .veb-variation-items-wrapper:nth-child(3) {
+  display: none;
+}
 
 .variable-item-contents:before {
   display: none !important;
