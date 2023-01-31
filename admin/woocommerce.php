@@ -144,3 +144,6 @@ function dcms_add_script_footer() {
         </script>
     <?php
 }
+
+// Fix up variants no show at cart page [size - color]
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );

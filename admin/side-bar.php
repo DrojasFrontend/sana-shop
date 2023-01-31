@@ -105,5 +105,20 @@ function sanna_shop_widgets_init() {
 			'show_in_rest'    => false,
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Feed', 'sanna-shop' ),
+			'id'            => 'feed-1',
+			'description'   => esc_html__( 'Add widgets here.', 'sanna-shop' ),
+			'before_title'    => '<h4>', 'after_title'   => '</h4>',
+			'before_widget'   => '<li class="feed-1">',
+			'after_widget'    => "</li>\n", 
+			'class'           => '',
+			'before_sidebar'  => '',
+			'after_sidebar'   => '',
+			'show_in_rest'    => false,
+		)
+	);
 }
 add_action( 'widgets_init', 'sanna_shop_widgets_init' );

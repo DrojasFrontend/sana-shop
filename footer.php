@@ -11,7 +11,10 @@
 
 ?>
 
-	<footer id="colophon" class="footer" data-scroll-section>
+
+<footer id="colophon" class="footer" data-scroll-section>
+		<?php dynamic_sidebar('Feed') ; ?> 
+		<hr class="hr--top">
 		<div class="footer-container">
 			<div class="footer-top">
 				<h2>CONOCE LAS ÚLTIMAS<strong> NOTICIAS</strong></h2>
@@ -25,7 +28,7 @@
 								<div class="icon">
 									<!-- <?php get_template_part('images/icons/email'); ?> -->
 								</div>
-								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Correo Electrónico" required>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Correo Electrónico" required data-required>
 								<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 							</div>
 							<div id="mce-responses">
@@ -84,6 +87,10 @@
 		</div>
 	</footer>
 </div>
+
+<!-- Popup Subscribe -->
+<?php get_template_part( 'partials/modal/subscribe' ); ?>
+<!-- Popup Subscribe -->
 
 <?php wp_footer(); ?>
 
