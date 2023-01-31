@@ -70,6 +70,11 @@ if ( post_password_required() ) {
 		?>
 
 		<div class="custom-product__summary entry-summary">
+			<div class="back">
+        <a class="link" onclick="window.history.go(-1); return false;" href="#">
+          <?php get_template_part('images/icons/arrow-prev-black'); ?>
+        </a>
+      </div>
 			<?php
 			/**
 			 * Hook: woocommerce_single_product_summary.

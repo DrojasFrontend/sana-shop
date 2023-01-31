@@ -13,6 +13,11 @@
 <main data-scroll-section class="page-template-<?php echo strtolower(get_the_title()); ?>">
   <div class="page-<?php echo strtolower(get_the_title()); ?>">
     <h1 class="page-<?php echo strtolower(get_the_title()); ?>__title">
+      <div class="back">
+        <a class="link" onclick="window.history.go(-1); return false;" href="#">
+          <?php get_template_part('images/icons/arrow-prev-black'); ?>
+        </a>
+      </div>
       <?php the_title(); ?>
     </h1>
     <div class="page-<?php echo strtolower(get_the_title()); ?>__wrapper">

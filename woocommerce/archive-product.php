@@ -37,9 +37,15 @@ do_action( 'woocommerce_before_main_content' );
 			$get_description = get_field('description', $get_term);
 			$get_background = get_field('background', $get_term);
 		?>
+		
 
 		<?php if ($get_background) : ?>
 			<div class="custom-product-category" style="background-image: url('<?php echo $get_background; ?>')">
+				<div data-scroll-section data-scroll-speed=".2" class="go-back-white">
+					<a onclick="window.history.go(-1); return false;" href="#">
+						<?php get_template_part('images/icons/arrow-prev'); ?>
+					</a>
+				</div>
 				<?php if ($get_heading) : ?>
 					<h1 class="custom-woocommerce-header__title page-title heading"><?php echo $get_heading; ?></h1>
 				<?php else : ?>
