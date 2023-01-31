@@ -4347,6 +4347,12 @@ html.has-scroll-dragging {
     width: 60px;
   }
 }
+@media only screen and (min-width: 1366px) {
+  .custom-product__wrapper .veb-variation-gallery-thumbnail-wrapper .iwp-thumbnail-prev-arrow,
+  .custom-product__wrapper .veb-variation-gallery-thumbnail-wrapper .iwp-thumbnail-next-arrow {
+    width: calc(100% - 10px);
+  }
+}
 .custom-product__wrapper .veb-variation-gallery-thumbnail-wrapper .iwp-thumbnail-next-arrow {
   top: 480px;
 }
@@ -5303,6 +5309,23 @@ html.has-scroll-dragging {
 }
 
 .wpro-pre-order-availability-date {
+  font-family: "suisse_intlultralight";
+  font-weight: 600;
+  font-size: 11px;
+  margin: 0;
+  font-style: normal;
+  line-height: 17px;
+  text-align: center;
+  width: calc(100% - 20px);
+}
+@media only screen and (min-width: 1200px) {
+  .wpro-pre-order-availability-date {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.wpro-pre-order-availability-date-cart {
   font-family: "suisse_intlultralight";
   font-weight: 600;
   font-size: 11px;
