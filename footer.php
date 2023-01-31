@@ -13,7 +13,11 @@
 
 
 <footer id="colophon" class="footer" data-scroll-section>
-		<?php dynamic_sidebar('Feed') ; ?> 
+		<?php 
+			if (is_front_page()) {
+			 dynamic_sidebar('Feed');
+			}
+		?>
 		<hr class="hr--top">
 		<div class="footer-container">
 			<div class="footer-top">
