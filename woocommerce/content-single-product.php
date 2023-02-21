@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 	<section class="custom-product__wrapper">
 		<?php
 			global $product;
-			$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );
+			$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( isset($product_id )), 'single-post-thumbnail' );
 		?>
 		<div class="custom-product-image__featured">
 			<figure>

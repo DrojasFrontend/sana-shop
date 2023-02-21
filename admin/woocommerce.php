@@ -117,33 +117,6 @@ function add_cw_currency_symbol( $custom_currency_symbol, $custom_currency ) {
 
 // Change position price variante to top */
 
-add_action( 'wp_footer', 'dcms_add_script_footer' );
-
-function dcms_add_script_footer() {
-    if ( ! is_product() ) return;
-    ?>
-        <script>
-        jQuery(function ($) {
-
-            $('.variations_form').on('woocommerce_variation_has_changed', function () {
-                const container_price_top = 'p.price';
-                const container_price_bottom = '.woocommerce-variation-price';
-
-                $(container_price_top).empty();
-
-                setTimeout(function(){
-                    if ( $(container_price_bottom).is(":visible") ){
-                        const content = $(container_price_bottom).html();
-                        $(container_price_top).html(content);
-                        $(container_price_bottom).hide();
-                    }
-                }, 500);
-            });
-
-        });
-        </script>
-    <?php
-}
 
 // Fix up variants no show at cart page [size - color]
 add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
